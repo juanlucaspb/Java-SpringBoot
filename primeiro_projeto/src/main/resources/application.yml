@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: primeiro projeto  # Nome da aplicação
+  springdoc:
+      swagger-ui:
+        path: /swagger-ui/index.html
+  datasource:
+    url: jdbc:mariadb://localhost:3306/projeto  # Substitua com sua URL de banco de dados
+    username: root  # Substitua com seu nome de usuário
+    password:   # Substitua com sua senha, se houver
+    driver-class-name: org.mariadb.jdbc.Driver  # Corrigido aqui
+  jpa:
+    hibernate:
+      ddl-auto: validate  # Ações de gerenciamento do banco de dados (none, update, create, create-drop)
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect  # Dialeto explícito para MariaDB
+    show-sql: true  # Para mostrar as queries SQL no log
